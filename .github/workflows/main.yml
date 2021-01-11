@@ -1,0 +1,18 @@
+name: Build and Deploy Angular
+on:
+  push:
+    branches:
+      - action-test
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Angular Deploy gh-pages Actions
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
+      with:
+        github_access_token: 003db6fb61784ca473458a90b9fbb2b703c8d590 # see the Configuration section for how you can create secrets
+        build_configuration: staging # The build environment for the app. please look configurations in your angular.json
+        base_href: /simple-google-search-1/   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
+        deploy_branch: gh-pages # The branch the action should deploy to.
+        angular_dist_build_folder: dist/simple-google-search-1 # The folder where your project is supposed to be after running ng build by the action.
