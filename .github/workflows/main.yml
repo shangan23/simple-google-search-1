@@ -26,7 +26,8 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v2
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        #ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         BASE_BRANCH: main
         BRANCH: gh-pages
         FOLDER: dist/simplegooglesearch1
