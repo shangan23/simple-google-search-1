@@ -23,7 +23,7 @@ export class SearchPageComponent implements OnInit {
     //FIXME: To call REST API through Services (get)
   }
 
-  //Good practice is not to forget to unsubscribe the subscribed services. 
+  //Good practice is not to forget to unsubscribe the subscribed services!! 
   ngOnDestroy():void{
     this.query_subscriber.unsubscribe();
   }
