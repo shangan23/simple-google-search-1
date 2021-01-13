@@ -28,4 +28,4 @@ jobs:
         ACCESS_TOKEN: a8cdb6717bee2efbc397a0d2f2addfee8eceb54b
         BASE_BRANCH: main
         BRANCH: gh-pages
-        FOLDER: dist/simplegooglesearch1
+        FOLDER: simple-google-search-1/client/google-search-appdist/simplegooglesearch1
